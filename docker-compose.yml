@@ -14,3 +14,4 @@ services:
               --no-browser
               --collaborative
               --config=/kaggle/jupyter_lab_config.py
+    runtime: nvidia
