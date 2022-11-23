@@ -7,4 +7,7 @@ COPY ./artifact/jupyter_lab_config.py /kaggle/.
 RUN pip install -U pip && pip install \
     fastprogress \
     japanize-matplotlib \
-    nb-black
+    nb-black \
+    jupyterlab_materialdarker
+
+COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
