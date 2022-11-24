@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - $PWD/working:/kaggle/working
-      - $PWD/input/:/kaggle/input
+      - $PWD/input:/kaggle/input
     working_dir: /kaggle/working
     ports:
       - 8888:8888
