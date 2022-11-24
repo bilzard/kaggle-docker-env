@@ -43,9 +43,7 @@ Tips: `input`ディレクトリにデータセットをダウンロードする�
 ## その他カスタマイズしたところ
 
 * Jupyter Labのデフォルトテーマを[Material Darker](https://github.com/oriolmirosa/jupyterlab_materialdarker)にした
-* Jupyter Labを共同編集モード[^1](`--collaborative`)で起動している。複数のクライアントから接続してnotebookの実行状態を確認することができる
-
-[^1]: https://jupyterlab.readthedocs.io/en/stable/user/rtc.html#real-time-collaboration
+* Jupyter Labを[共同編集モード](https://jupyterlab.readthedocs.io/en/stable/user/rtc.html#real-time-collaboration) (`--collaborative`)で起動している。複数のクライアントから接続してnotebookの実行状態を確認することができる
 
 ## 参考
 
