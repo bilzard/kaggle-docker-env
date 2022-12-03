@@ -2,6 +2,7 @@ version: "3"
 services:
   jupyter:
     build: .
+    shm_size: '64gb'
     volumes:
       - $PWD/working:/kaggle/working
       - $PWD/input:/kaggle/input
