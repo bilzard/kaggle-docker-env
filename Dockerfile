@@ -10,5 +10,6 @@ RUN pip install -U pip && pip install \
     japanize-matplotlib \
     nb-black \
     jupyterlab_materialdarker
+RUN pip freeze >| /kaggle/requirements.lock
 
 COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
