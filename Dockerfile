@@ -23,3 +23,5 @@ RUN curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fishe
     apt install -y fonts-powerline && \
     fisher install oh-my-fish/theme-bobthefish && \
     fisher install jethrokuan/z
+
+WORKDIR /kaggle/working
