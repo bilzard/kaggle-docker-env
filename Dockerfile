@@ -10,3 +10,5 @@ RUN pip install -U pip && pip install -r requirements.txt
 RUN pip freeze >| requirements.lock
 
 COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
+
+RUN apt install -y colordiff && echo "alias diff=colordiff" >> ~/.bashrc
