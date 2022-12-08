@@ -2,6 +2,8 @@
 
 Kaggle Notebookの実行環境のソースコード。ローカルマシン上でPublic Notebookの動作確認をするために作った。
 
+<image src="https://user-images.githubusercontent.com/36561962/206400521-cbe203d9-657c-4414-8b7a-f95675fee59e.png" width=800/>
+
 ## Requirements
 
 - ubuntu 22.04で動作確認ずみ
