@@ -2,6 +2,7 @@ version: "3"
 services:
   jupyter:
     build: .
+    container_name: kaggle-jupyter
     shm_size: '64gb'
     volumes:
       - $PWD/working:/kaggle/working
