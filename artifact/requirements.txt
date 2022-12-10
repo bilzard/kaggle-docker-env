@@ -4,3 +4,4 @@ nb-black
 jupyterlab_materialdarker
 jupyterlab-nvdashboard
 bokeh==2.4.1
+optuna
