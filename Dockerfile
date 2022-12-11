@@ -23,5 +23,12 @@ RUN curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fishe
     apt install -y fonts-powerline && \
     fisher install oh-my-fish/theme-bobthefish && \
     fisher install jethrokuan/z
+# pytorch for RTX3090 Ti
+RUN pip install torch==1.12.1+cu116 \
+  torchvision==0.13.1+cu116 \
+  torchaudio==0.12.1 \
+  --extra-index-url https://download.pytorch.org/whl/cu116
+RUN pip install evaluate
+RUN git config --global --add safe.directory "*"
 
 WORKDIR /kaggle/working
