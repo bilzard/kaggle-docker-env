@@ -3,9 +3,8 @@ FROM gcr.io/kaggle-gpu-images/python:v122
 RUN apt update && apt upgrade -y
 
 WORKDIR /kaggle
-COPY ./artifact/jupyter_lab_config.py .
-COPY ./artifact/requirements.txt .
 
+# colordiff
 RUN apt install -y colordiff && echo "alias diff=colordiff" >> ~/.bashrc
 
 # fish
@@ -28,12 +27,20 @@ RUN pip install torch==1.12.1+cu116 \
   torchaudio==0.12.1 \
   --extra-index-url https://download.pytorch.org/whl/cu116
 
+# install pip requirements
+COPY ./artifact/requirements.txt .
 RUN pip install -U pip && pip install -r requirements.txt
 RUN pip freeze > requirements.lock
+
+# jupyter lab config
+COPY ./artifact/jupyter_lab_config.py .
 COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
+
+# code formatter
 RUN mkdir -p  /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter
 COPY ./artifact/jupyterlab_code_formatter/settings.jupyterlab-settings /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/.
 
+# git safe directory
 RUN git config --global --add safe.directory "*"
 
 WORKDIR /kaggle/working
