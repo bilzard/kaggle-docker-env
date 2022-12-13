@@ -31,6 +31,8 @@ RUN pip install torch==1.12.1+cu116 \
 RUN pip install -U pip && pip install -r requirements.txt
 RUN pip freeze > requirements.lock
 COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
+RUN mkdir -p  /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter
+COPY ./artifact/jupyterlab_code_formatter/settings.jupyterlab-settings /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/.
 
 RUN git config --global --add safe.directory "*"
 
