@@ -36,10 +36,6 @@ RUN pip freeze > requirements.lock
 COPY ./artifact/jupyter_lab_config.py .
 COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
 
-# code formatter
-RUN mkdir -p  /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter
-COPY ./artifact/jupyterlab_code_formatter/settings.jupyterlab-settings /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/.
-
 # git safe directory
 RUN git config --global --add safe.directory "*"
 

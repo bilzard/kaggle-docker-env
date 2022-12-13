@@ -1,8 +1,8 @@
 fastprogress
 japanize-matplotlib
 jupyterlab_materialdarker
-jupyterlab-code-formatter
 jupyterlab-nvdashboard
 bokeh==2.4.1
 optuna
 evaluate
+nb-black
