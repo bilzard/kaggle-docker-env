@@ -1,6 +1,5 @@
 fastprogress
 japanize-matplotlib
-nb-black
 jupyterlab_materialdarker
 jupyterlab-code-formatter
 jupyterlab-nvdashboard
