@@ -39,4 +39,9 @@ COPY ./artifact/overrides.json /opt/conda/share/jupyter/lab/settings/.
 # git safe directory
 RUN git config --global --add safe.directory "*"
 
+# direnv
+RUN apt install -y direnv
+RUN echo 'export EDITOR=vim' >> ~/.bashrc && \
+  echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+
 WORKDIR /kaggle/working
