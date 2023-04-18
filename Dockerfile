@@ -1,4 +1,4 @@
-FROM gcr.io/kaggle-gpu-images/python:v126
+FROM gcr.io/kaggle-gpu-images/python:v132
 
 RUN apt update && apt upgrade -y
 

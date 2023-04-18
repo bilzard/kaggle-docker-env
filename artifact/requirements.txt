@@ -5,4 +5,3 @@ jupyterlab-nvdashboard
 bokeh==2.4.1
 optuna
 evaluate
-nb-black
